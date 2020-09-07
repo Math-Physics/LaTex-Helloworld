@@ -1,0 +1,180 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[UTF8]{ctex}
+\linespread{1.5}%1.5倍行距
+\usepackage[top=3.0cm,bottom=3.0cm,left=3.0cm,right=3.0cm]{geometry}%页边距
+\usepackage[bookmarks=true,colorlinks=true,linkcolor=blue,urlcolor=green,citecolor=blue,linktocpage=true,hyperindex=true]{hyperref}%使ref,cite有超链接,记得xelatex2遍
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}%多种公式环境和数学命令
+\usepackage{amsthm}
+\usepackage{array}%数组和表格制作
+\usepackage{caption}
+\usepackage{color}
+\usepackage{commutative-diagrams}%用CoDi包画交换图
+\usepackage{dsfont}
+\usepackage{epsfig}
+%\usepackage{epstopdf}%能够插入eps格式图片
+\usepackage{fancyhdr}%页眉页脚设置
+\usepackage{float}
+\usepackage{fontspec}%和字体有关
+\usepackage{graphicx}%插图
+\usepackage{indentfirst}%首行缩进宏包
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{mathrsfs}
+\usepackage{multicol}%跨列表格
+\usepackage{multirow}%跨行表格
+\usepackage[numbers,sort&compress]{natbib}%参考文献,已弃{cite}
+\usepackage{rawfonts}
+\usepackage{tabularx}%自动设置表格列宽
+\usepackage{tikz}
+\usepackage{tikz-cd}%tikzcd画交换图
+\usepackage{titlesec}%标题设置
+\usepackage{titletoc}%目录格式设置
+\usepackage{xcolor}
+\usepackage[all]{xy}
+%--------------------------以下是数学缩写
+\newcommand{\A}{\mathscr{A}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Aut}{\operatorname{Aut}}
+%\newcommand{\C}{\mathbb{C}}%和hyperref宏包冲突
+\renewcommand{\char}{\operatorname{char}}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\gl}{\mathrm{gl}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\id}{\mathds{1}}
+\newcommand{\ima}{\operatorname{im}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\rank}{\operatorname{rank}}
+%默认的\S是2个s构成的花section
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\sl}{\mathrm{sl}}
+\renewcommand{\span}{\operatorname{span}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\X}{\mathfrak{X}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\L}{\mathcal{L}}
+\newcommand{\dif}[2]{\frac{d{#1}}{d{#2}}}
+\newcommand{\pa}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\lang}[1]{\left\langle#1\right\rangle}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\paren}[1]{\left(#1\right)}
+%------------------------以下是定理排版
+\theoremstyle{plain}
+%也可按需选择{plain}{definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{eg}[thm]{Example}
+\newtheorem{ex}[thm]{Exercise}
+\renewcommand{\proofname}{Proof}
+\renewcommand{\refname}{References}
+\renewcommand{\contentsname}{Contents}
+\everymath{\displaystyle}%好看不拥挤的数学公式
+%-----------------正文开始 qwq --------------
+\begin{document}
+
+\title{Article模板}
+\author{姓名}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+\subsection{Definitions}
+
+
+
+
+$\check{e}\acute{e}\grave{e}\breve{e}\ddot{x}\dot{y}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% 长公式，用\[ \begin{aligned} & \\等命令
+% 公式标记，形如\eqno(*)，放在公式末尾\]之前
+
+% \[
+%     \begin{aligned}
+%         L_{g}(\gamma) = & \int_0^1 |\gamma'(t)|_g dt                           \\
+%         =               & \int_0^1 h(\gamma(t))|\gamma'(t)|_{\widetilde{g}} dt \\
+%         \geq            & \int_0^1 \gamma'(f)dt                                \\
+%         =               & \int_0^1 \frac{d}{dt}f(\gamma(t))dt                  \\
+%         =               & f(\gamma(1))+0+0+0+0+0+0+0                           \\
+%                         & -f(\gamma(0))                                        \\
+%         =               & f(q)-f(p).
+%     \end{aligned}\eqno(*)
+% \]
+
+%左大括号，用\left\{  ；然后\begin{aligned} ；右边无配对括号，用\right.
+
+% \[
+%     f(x)=\left\{
+%     \begin{aligned}
+%         & x,  &  & x \in A,    \\
+%         & -x, &  & x \notin A.
+%     \end{aligned}
+%     \right.
+% \]
+
+% 矩阵用\left( \begin{array}{cccc表示矩阵的阶数} 然后用&和\\
+
+% \[
+%     \det A=\det
+%     \left(
+%     \begin{array}{cccc}
+%             a_{11} & a_{12} & \cdots & a_{1n} \\
+%             a_{21} & a_{22} & \cdots & a_{2n} \\
+%             \cdots &        & \ddots & \vdots \\
+%         \end{array}
+%     \right)
+% \]
+
+
+% 脚注用\footnote{出现在本页下方脚注的文字}
+% 引用定理等，用\label和\ref
+
+% 插入图片
+% \begin{figure}[htbp!]
+%     \centering
+%     \includegraphics[width=6cm]{pic.jpg}\\
+%     \caption{标题}\label{pic}
+% \end{figure}
+
+\cite{Otto_Forster_Riem_surfaces}
+% \nocite{*}%星号表示引用bib文件中的全部文献
+\bibliographystyle{plain}
+\bibliography{reference}
+\end{document}
